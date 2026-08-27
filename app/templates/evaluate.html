@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="page evaluate-page">
+  <header class="page-head">
+    <span class="section-kicker">Risk Check</span>
+    <h1>تقييم طلب سريع</h1>
+    <p>أدخل بيانات الطلب وسيتم حفظه في النظام مع نتيجة المخاطر والأسباب الواضحة للتاجر.</p>
+  </header>
+  <section class="workbench">
+    <form class="form" method="post">
+      <label>رقم الهاتف<input name="phone" placeholder="0551 00 00 01" required></label>
+      <label>اسم العميل<input name="customer_name" placeholder="اختياري"></label>
+      <label>الولاية<input name="wilaya" placeholder="Alger" required></label>
+      <label>البلدية<input name="commune" placeholder="اختياري"></label>
+      <label>قيمة الطلب DZD<input name="amount_dzd" type="number" min="0" placeholder="8500" required></label>
+      <label>تصنيف المنتج<input name="product_category" placeholder="Cosmetique / Vetements" required></label>
+      <label>مصدر الطلب<select name="order_channel"><option>Facebook</option><option>Instagram</option><option>Website</option><option>WhatsApp</option><option>Other</option></select></label>
+      <label>محاولات الاتصال<input name="contact_attempts" type="number" min="0" max="20" value="0"></label>
+      <label class="check"><input type="checkbox" name="is_confirmed" value="true"> تم تأكيد الطلب</label>
+      <label class="wide">ملاحظة<textarea name="note" placeholder="ملاحظة اختيارية للفريق"></textarea></label>
+      <button class="btn wide" type="submit">احسب نسبة الخطر وأضف الطلب</button>
+    </form>
+    <aside class="result-panel {% if result %}{{ result.risk_level }}{% endif %}">
+      {% if result %}
+        <span class="pill {{ result.risk_level }}">{{ result.risk_level|upper }}</span>
+        <strong>{{ result.risk_score }}/100</strong>
+        <h2>{% if result.risk_level == 'low' %}آمن للإرسال{% elif result.risk_level == 'medium' %}يحتاج تأكيد إضافي{% else %}خطر مرتفع{% endif %}</h2>
+        <p>{{ result.recommendation }}</p>
+        <ul>{% for reason in result.reasons %}<li>{{ reason }}</li>{% endfor %}</ul>
+        <a class="btn ghost" href="/dashboard">عرض الطلب في Dashboard</a>
+      {% else %}
+        <span class="pill medium">READY</span>
+        <strong>--/100</strong>
+        <h2>النتيجة ستظهر هنا</h2>
+        <p>سيتم عرض المستوى، التوصية، والأسباب بعد الضغط على زر الحساب.</p>
+      {% endif %}
+    </aside>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="hero">
+  <section class="hero-copy">
+    <span class="badge">نظام جزائري لمساعدة تجار COD</span>
+    <h1>قبل ما تبعث الكولي... اعرف نسبة الخطر وابعث بثقة</h1>
+    <p>ThiqaDZ يعطيك Risk Score واضح قبل إرسال الطرد، حتى تقلّل الطرود المرفوضة ومصاريف المرتجعات وتعرف متى تحتاج تأكيد إضافي.</p>
+    <div class="actions"><a class="btn" href="/evaluate">جرّب أول 100 طلب مجانًا</a><a class="btn ghost" href="/dashboard">شاهد لوحة العرض</a></div>
+    <div class="hero-points" aria-label="مميزات سريعة"><span>Rule-Based شفاف</span><span>SQLite محلي</span><span>بدون API مدفوع</span></div>
+  </section>
+  <section class="dashboard-preview" aria-label="معاينة لوحة المخاطر">
+    <div class="preview-top"><div><small>Risk Score</small><strong>87/100</strong><span class="pill low">Low Risk</span></div><div class="shield">✓</div></div>
+    <div class="score-bar"><span style="width:87%"></span></div>
+    <p>آمن للإرسال: تم تأكيد الطلب، والعميل لديه طلبات سابقة ناجحة.</p>
+    <div class="mini-grid"><div><b>28</b><span>طلب تجريبي</span></div><div><b>3</b><span>مستويات خطر</span></div><div><b>COD</b><span>مصمم للتجار</span></div></div>
+  </section>
+</main>
+<section class="band"><div><span class="section-kicker">المشكلة</span><h2>الطرود المرفوضة تستهلك الهامش قبل أن تشعر بها</h2><p>كل رفض يعني مصاريف توصيل، وقت فريق التأكيد، وتأخر دوران المخزون. ThiqaDZ يساعدك تأخذ قرار إرسال أو تأكيد إضافي قبل خروج الطرد.</p></div></section>
+<section class="cards"><article><span>01</span><h3>أدخل الطلب</h3><p>الهاتف، الولاية، قيمة الطلب، المصدر، حالة التأكيد ومحاولات الاتصال.</p></article><article><span>02</span><h3>احصل على تقييم</h3><p>محرك واضح يفحص الرقم، السجل، قيمة الطلب، التكرار، والنتائج السابقة لنفس العميل.</p></article><article><span>03</span><h3>قرر بثقة</h3><p>أخضر للإرسال، برتقالي لتأكيد إضافي، وأحمر للتوقف حتى يتم التحقق.</p></article></section>
+<section class="split"><div><span class="section-kicker">الفوائد</span><h2>لوحة واحدة لفريق التأكيد والإرسال</h2><p>تابع Low / Medium / High Risk، حالات Delivered وRefused، نسبة التسليم، والخسائر التقديرية من الطلبات المرفوضة.</p></div><div class="example high"><b>32/100</b><strong>خطر مرتفع</strong><span>الطلب غير مؤكد، عدة محاولات اتصال فاشلة، وقيمة الطلب مرتفعة.</span></div></section>
+<section class="faq"><span class="section-kicker">FAQ</span><h2>أسئلة سريعة</h2><details open><summary>هل ThiqaDZ نظام AI؟</summary><p>النسخة الحالية Rule-Based وليست AI حقيقي. تم تجهيز الهيكل لإضافة ML لاحقًا عند توفر بيانات كافية.</p></details><details><summary>هل يحتاج خدمات مدفوعة؟</summary><p>لا. النسخة الحالية تعمل محليًا بدون مفاتيح API وبدون أي تكامل خارجي مدفوع.</p></details><details><summary>هل يمكن فتحه من الهاتف؟</summary><p>نعم عند تشغيل Uvicorn على 0.0.0.0 واستخدام IPv4 الخاص بالحاسوب داخل نفس شبكة Wi-Fi.</p></details></section>
+<section class="final-cta"><h2>ابدأ بتقييم أول طلب الآن</h2><p>واجهة بسيطة للتاجر، وAPI جاهزة للتكامل لاحقًا مع المتاجر وشركات التوصيل.</p><a class="btn" href="/evaluate">احسب نسبة الخطر</a></section>
+<footer><strong>ThiqaDZ</strong><span>نظام جزائري لمساعدة تجار COD - MVP محلي قابل للتطوير</span></footer>
+{% endblock %}

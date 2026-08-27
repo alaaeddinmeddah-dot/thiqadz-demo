@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: thiqadz-demo
+    runtime: python
+    plan: free
+    buildCommand: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: AUTO_SEED_DEMO
+        value: "true"
+      - key: DATABASE_URL
+        value: sqlite:///./thiqa.db
+      - key: REFUSED_DELIVERY_LOSS_DZD
+        value: "700"
+      - key: ALLOWED_ORIGINS
+        value: https://thiqadz-demo.onrender.com

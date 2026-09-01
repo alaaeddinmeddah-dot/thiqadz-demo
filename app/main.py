@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import Depends, FastAPI, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, RedirectResponse
@@ -50,6 +51,11 @@ def health():
 @app.get("/", response_class=HTMLResponse)
 def landing(request: Request):
     return templates.TemplateResponse(request, "landing.html")
+
+
+@app.get("/prepbot", response_class=HTMLResponse)
+def prepbot_demo():
+    return HTMLResponse(Path("prepbot-demo.html").read_text(encoding="utf-8"))
 
 
 @app.get("/dashboard", response_class=HTMLResponse)

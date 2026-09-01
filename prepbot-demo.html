@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مساعد التحضيري — Demo</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1a2b;--card:#101f33;--card2:#13263d;--txt:#f7fbff;--muted:#9bb0c8;--line:rgba(255,255,255,.09);--blue:#2aabee;--cyan:#79d7ff;--green:#48d7a6;--pink:#ff79b0;--gold:#ffd36b;--shadow:0 24px 80px rgba(0,0,0,.32)}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,rgba(42,171,238,.18),transparent 30%),radial-gradient(circle at 10% 20%,rgba(255,121,176,.08),transparent 27%),var(--bg);color:var(--txt);font-family:Tahoma,Arial,sans-serif;min-height:100vh}.wrap{max-width:1180px;margin:auto;padding:28px 18px 60px}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:34px}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.logo{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#2aabee,#6dd6ff);box-shadow:0 10px 30px rgba(42,171,238,.28);font-size:22px}.badge{border:1px solid rgba(121,215,255,.26);background:rgba(42,171,238,.09);color:#bdeaff;padding:8px 12px;border-radius:999px;font-size:12px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.035);padding:8px 12px;border-radius:999px;color:#cfe9fb;font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}h1{font-size:clamp(38px,6vw,78px);line-height:1.06;margin:20px 0 16px;letter-spacing:-1.5px}.accent{background:linear-gradient(90deg,#8adfff,#2aabee);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;line-height:1.9;color:#b8c9db;max-width:700px}.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.mini{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:15px;border-radius:18px}.mini b{display:block;margin-bottom:5px}.mini span{font-size:13px;color:var(--muted)}.phoneWrap{position:relative;display:grid;place-items:center}.glow{position:absolute;width:75%;height:75%;border-radius:50%;background:rgba(42,171,238,.22);filter:blur(60px)}.phone{position:relative;width:min(380px,100%);border:1px solid rgba(255,255,255,.14);border-radius:38px;background:#06101d;padding:10px;box-shadow:var(--shadow)}.screen{min-height:690px;border-radius:31px;overflow:hidden;background:linear-gradient(180deg,#0d1b2d,#0b1726)}.topbar{padding:18px 18px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.02)}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#2aabee,#61d9ff);font-size:20px}.tgname{font-weight:800}.status{font-size:12px;color:#8fa7bd;margin-top:3px}.chat{padding:18px;display:flex;flex-direction:column;gap:12px}.msg{max-width:88%;padding:13px 14px;border-radius:18px;line-height:1.6;font-size:14px}.bot{align-self:flex-start;background:#13263d;border-bottom-left-radius:5px}.user{align-self:flex-end;background:#1a5c78;border-bottom-right-radius:5px}.menu{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:2px}.btn{appearance:none;border:1px solid rgba(255,255,255,.08);background:#11253a;color:#eefaff;border-radius:14px;padding:13px 10px;font-weight:700;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px);background:#15314d}.btn:active{transform:scale(.98)}.sub{display:none;grid-template-columns:repeat(5,1fr);gap:7px}.letter{appearance:none;border:1px solid rgba(121,215,255,.16);background:#0f2236;color:#fff;border-radius:12px;padding:11px 2px;font-weight:800;cursor:pointer}.features{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature{padding:20px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02))}.icon{font-size:24px;margin-bottom:14px}.feature h3{margin:0 0 8px}.feature p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}.flow{margin-top:48px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:28px;padding:26px}.flow h2{margin-top:0;font-size:28px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{position:relative;padding:18px;border-radius:18px;background:#0e1d30}.num{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:rgba(42,171,238,.14);color:#8adfff;font-weight:800;margin-bottom:12px}.step b{display:block;margin-bottom:7px}.step span{font-size:13px;color:var(--muted);line-height:1.6}.cta{margin-top:28px;padding:20px 22px;border-radius:22px;background:linear-gradient(135deg,rgba(42,171,238,.15),rgba(121,215,255,.06));border:1px solid rgba(121,215,255,.18);display:flex;justify-content:space-between;align-items:center;gap:16px}.cta strong{font-size:20px}.cta small{display:block;color:#a7bdcf;margin-top:5px}.pill{padding:11px 15px;border-radius:999px;background:var(--blue);color:white;font-weight:800;font-size:13px;white-space:nowrap}@media(max-width:900px){.hero{grid-template-columns:1fr}.phoneWrap{margin-top:10px}.features{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.promise{grid-template-columns:1fr}.screen{min-height:650px}}@media(max-width:560px){.wrap{padding:18px 12px 36px}.nav{margin-bottom:22px}.badge{display:none}h1{font-size:44px}.lead{font-size:16px}.features,.steps{grid-template-columns:1fr}.phone{width:100%;border-radius:30px}.screen{min-height:620px;border-radius:24px}.cta{align-items:flex-start;flex-direction:column}.menu{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav">
+    <div class="brand"><div class="logo">✈</div><div>مساعد التحضيري <span style="color:#7bdcff">Bot</span></div></div>
+    <div class="badge">نسخة تجريبية • بدون تسجيل</div>
+  </div>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> القناة تبقى كما هي — البوت يضيف التنظيم فقط</div>
+      <h1>حوّلي قناتك إلى <span class="accent">تجربة تعليمية ذكية</span></h1>
+      <p class="lead">المشتركات يبقين داخل نفس قناة Telegram ونفس المحتوى. البوت يساعدهن فقط على الوصول إلى الحروف، الدروس، الأناشيد، التلوين والحقائب في ثوانٍ بدل البحث بين مئات المنشورات.</p>
+      <div class="promise">
+        <div class="mini"><b>🔒 بدون خسارة الزبائن</b><span>لا نقل للقناة ولا حذف للمحتوى.</span></div>
+        <div class="mini"><b>⚡ وصول سريع</b><span>كل قسم يظهر بزر واضح ومباشر.</span></div>
+        <div class="mini"><b>✨ شكل احترافي</b><span>واجهة حديثة ترفع قيمة القناة.</span></div>
+      </div>
+    </div>
+
+    <div class="phoneWrap">
+      <div class="glow"></div>
+      <div class="phone">
+        <div class="screen">
+          <div class="topbar"><div class="avatar">🌷</div><div><div class="tgname">مساعد التحضيري</div><div class="status">bot • online</div></div></div>
+          <div class="chat" id="chat">
+            <div class="msg bot">أهلاً بكِ 🌸<br>أنا مساعد القناة. اختاري ما تحتاجينه وسأوصلك مباشرة للمحتوى الموجود في القناة.</div>
+            <div class="menu" id="mainMenu">
+              <button class="btn" data-action="letters">🔤 الحروف</button><button class="btn" data-action="lessons">📚 الدروس</button>
+              <button class="btn" data-action="songs">🎵 الأناشيد</button><button class="btn" data-action="coloring">🎨 التلوين</button>
+              <button class="btn" data-action="games">🧩 ألعاب الذكاء</button><button class="btn" data-action="bags">🎒 الحقائب</button>
+            </div>
+            <div class="sub" id="letters"><button class="letter">أ</button><button class="letter">ب</button><button class="letter">ت</button><button class="letter">ث</button><button class="letter">ج</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><div class="icon">🔤</div><h3>كل حرف في ملفه</h3><p>PDF، صور، نشاطات، فيديو وأنشودة مرتبطة بالحرف المطلوب.</p></div>
+    <div class="feature"><div class="icon">🔎</div><h3>بدون بحث طويل</h3><p>المعلمة تضغط فقط على القسم المناسب وتصل للمحتوى فورًا.</p></div>
+    <div class="feature"><div class="icon">📢</div><h3>نفس قناة Telegram</h3><p>القناة الحالية تبقى مكان النشر والجمهور؛ البوت مجرد مساعد ذكي.</p></div>
+    <div class="feature"><div class="icon">🧠</div><h3>قابل للتطوير</h3><p>يمكن إضافة بحث، اشتراكات، إشعارات وإحصائيات في مراحل لاحقة.</p></div>
+  </section>
+
+  <section class="flow">
+    <h2>كيف يعمل؟</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><b>المشتركة تدخل البوت</b><span>من رابط موجود داخل نفس القناة.</span></div>
+      <div class="step"><div class="num">2</div><b>تختار القسم</b><span>الحروف، دروس، أناشيد، ألعاب أو حقائب.</span></div>
+      <div class="step"><div class="num">3</div><b>البوت يرتّب المحتوى</b><span>ويعرض الخيارات المرتبطة بالطلب.</span></div>
+      <div class="step"><div class="num">4</div><b>يفتح منشور القناة</b><span>فيصل المستخدم للمحتوى الأصلي مباشرة.</span></div>
+    </div>
+    <div class="cta"><div><strong>القناة هي الأساس، والبوت هو التنظيم الذكي.</strong><small>هذا Demo تصوري لعرض الفكرة قبل ربطها بالمحتوى الحقيقي.</small></div><div class="pill">Demo تفاعلي</div></div>
+  </section>
+</div>
+<script>
+const chat=document.getElementById('chat'),letters=document.getElementById('letters');
+const text={lessons:'📚 قسم الدروس جاهز<br><small>اختاري المستوى أو الدرس وسيظهر المنشور المناسب من القناة.</small>',songs:'🎵 الأناشيد التعليمية<br><small>مرتبة حسب الموضوع والحرف.</small>',coloring:'🎨 دفاتر التلوين<br><small>أنشطة جاهزة للطباعة والوصول السريع.</small>',games:'🧩 ألعاب الذكاء<br><small>تركيز، مطابقة، أرقام وحروف.</small>',bags:'🎒 الحقائب التحضيرية<br><small>كل حقيبة في قسم واضح ومنظم.</small>'};
+function add(html,cls='bot'){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;chat.appendChild(d);d.scrollIntoView({behavior:'smooth',block:'nearest'});}
+document.getElementById('mainMenu').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const a=b.dataset.action;if(a==='letters'){add('🔤 الحروف','user');add('اختاري الحرف المطلوب 👇');letters.style.display='grid';return}add(b.textContent,'user');add(text[a]);});
+letters.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;add('حرف '+b.textContent,'user');add('تم العثور على ملف <b>حرف '+b.textContent+'</b> ✅<br>📄 PDF تعليمي<br>🖼️ صور ومعلقات<br>🎵 أنشودة الحرف<br>✏️ تمارين وأنشطة<br><small style="color:#9bb0c8">في النسخة الحقيقية هذه العناصر تفتح منشورات القناة الأصلية.</small>');});
+</script>
+</body>
+</html>
